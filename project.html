@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avatar Customization</title>
+  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Header with Animated Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <span class="fit">Fit</span><span class="verse">Verse</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-item">Home</a></li>
+        <li><a href="#avatar-section" class="nav-item">Avatar</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+        <!-- Login Button -->
+<div class="login-button-container">
+    <a href="login.html" class="login-button">Login</a>
+  </div>
+  
+      </ul>
+      <div class="burger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Avatar Customization Section -->
+  <main>
+    <section id="avatar-section" class="avatar-customization">
+      <h2>Customize Your Avatar</h2>
+      <div class="avatar-container">
+        <div id="avatar" class="avatar">
+          <svg width="250" height="450" id="human-avatar" viewBox="0 0 250 450">
+            <circle id="head" cx="125" cy="80" r="50" fill="#f1c27d" />
+            <rect id="body" x="85" y="130" width="80" height="170" fill="#ffcc99" />
+            <rect id="arms-left" x="50" y="170" width="30" height="100" fill="#f1c27d" />
+            <rect id="arms-right" x="170" y="170" width="30" height="100" fill="#f1c27d" />
+            <rect id="legs-left" x="95" y="300" width="30" height="120" fill="#ffcc99" />
+            <rect id="legs-right" x="125" y="300" width="30" height="120" fill="#ffcc99" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Customization Controls -->
+      <div class="controls">
+        <div class="control-group">
+          <label for="skin-tone">Skin Tone:</label>
+          <input type="color" id="skin-tone" value="#f1c27d">
+        </div>
+
+        <div class="control-group">
+          <label for="body-type">Body Type:</label>
+          <select id="body-type">
+            <option value="slim">Slim</option>
+            <option value="athletic">Athletic</option>
+            <option value="average">Average</option>
+            <option value="fat">Fat</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="height">Height:</label>
+          <input type="range" id="height" min="150" max="210" value="175" step="1">
+          <span id="height-value">175 cm</span>
+        </div>
+
+        <div class="control-group">
+          <label for="hair-color">Hair Color:</label>
+          <input type="color" id="hair-color" value="#000000">
+        </div>
+
+        <button id="reset-btn" class="reset-btn">Reset Avatar</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 FitVerse. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

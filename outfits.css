@@ -1,0 +1,286 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff99cc, #66ccff);
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  header {
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  /* Container for the Login Button */
+.login-button-container {
+    position: relative;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Make sure it stays on top of other elements */
+  }
+  
+  /* Styling for the Login Button */
+  .login-button {
+    display: inline-block;
+    background-color: #ff7e5f;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #feb47b;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-button:focus {
+    outline: none;
+  }
+  
+  /* Optional: Animation on page load */
+  @keyframes buttonAppear {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .login-button-container {
+    animation: buttonAppear 1s ease-out;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-left {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar-left li {
+    margin: 0 15px;
+  }
+  
+  .navbar-left a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-left a:hover {
+    color: #ffcc00;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-box {
+    padding: 8px;
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    margin-right: 10px;
+    outline: none;
+  }
+  
+  .search-btn {
+    padding: 8px 12px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .search-btn i {
+    font-size: 20px;
+    color: white;
+  }
+  
+  .outfits-gallery {
+    padding: 40px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .outfit-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .outfit-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .outfit-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .outfit-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .outfit-info {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .outfit-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .outfit-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  .brands {
+    margin-top: 40px;
+  }
+  
+  .brand-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .brand-item {
+    text-align: center;
+    width: 25%;
+    transition: transform 0.3s ease;
+  }
+  
+  .brand-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .brand-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+  }
+  
+  footer p {
+    color: #ccc;
+  }
+  
+  @media (max-width: 768px) {
+    .outfit-item {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .outfit-item {
+      width: 100%;
+    }
+  
+    .brand-item {
+      width: 100%;
+    }
+  }
+  /* Basic button styling */
+.wear-btn {
+    background-color: #ff6b6b; /* Vibrant red color */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+  
+  /* Hover effect */
+  .wear-btn:hover {
+    background-color: #ff3b3b; /* Darker red on hover */
+    transform: translateY(-5px); /* Slightly lift the button */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
+  }
+  
+  /* Focus effect */
+  .wear-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.7); /* Red glow on focus */
+  }
+  
+  /* Active effect */
+  .wear-btn:active {
+    background-color: #ff1f1f; /* Even darker red on click */
+    transform: translateY(2px); /* Slightly pressed effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Reset shadow on click */
+  }
+  
+  /* Disabled button state */
+  .wear-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+  
+  /* Adding a subtle animation to make the button bounce */
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .wear-btn {
+    animation: bounce 1s ease infinite; /* Apply the bounce animation */
+  }
+  
+  

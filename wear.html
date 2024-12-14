@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitVerse - Avatar</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="navbar-left">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="avatar.html" class="active">Avatar</a></li>
+        <li><a href="outfits.html">Outfits</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search Outfits..." />
+        <button class="search-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="avatar-container">
+      <h1>My Avatar</h1>
+      
+      <!-- Display Avatar Image (Can be styled to change based on selected outfit) -->
+      <div class="avatar">
+        <img src="avatar.png" alt="Avatar" id="avatar-img" />
+      </div>
+
+      <!-- Outfit Display -->
+      <h2>Currently Wearing:</h2>
+      <div class="outfit-display">
+        <h3 id="outfit-name">No Outfit Selected</h3>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 FitVerse. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Get outfit from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const outfit = urlParams.get('outfit');
+
+    // If an outfit is selected, update the display
+    if (outfit) {
+      document.getElementById('outfit-name').textContent = outfit;
+      document.getElementById('avatar-img').src = `${outfit.toLowerCase().replace(/\s+/g, '-')}.jpg`; // Change this as per actual outfit images
+    }
+  </script>
+</body>
+</html>
